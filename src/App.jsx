@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import ResponsiveLayout from "./components/layouts/ResponsiveLayout";
 import { TasksProvider } from "./contexts/TasksContext";
 import { Toaster } from "react-hot-toast";
@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <TasksProvider>
-      <BrowserRouter>
+      <HashRouter>
         <ResponsiveLayout />
         <Toaster
           position="bottom-center"
@@ -18,7 +18,7 @@ function App() {
             },
           }}
         />
-      </BrowserRouter>
+      </HashRouter>
     </TasksProvider>
   );
 }
